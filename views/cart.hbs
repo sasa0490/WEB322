@@ -1,0 +1,83 @@
+<!-- 
+  WEB322 Assignment 2
+  Name: Omar Khan
+  Student Number: 132197203
+  Email: okhan27@myseneca.ca
+  Section NCC
+  Date: 29/6/2021
+  Live demo: https://web322-a2-omar-khan.herokuapp.com/
+  github repo: https://github.com/lowsound42/web322a2
+  All the work in the project is my own except for stock photos, icons, and bootstrap files included
+ -->
+
+<body>
+  <div class="container bottom-buffer">
+    <div class="container holder top-buffer reg flexDash">
+    <div>
+      <h3 class="well bottom-buffer top-padding" id="planHolder"></h3>
+     </div>       
+     <div>
+    </div>
+  </div>
+  {{#if cart}}
+  {{#unless tempCart}}
+  HELLO
+  {{/unless}}
+  {{#if tempCart}}
+    <div id="planDetails">
+        <div class="col-lg card card-body-special priceHolder">
+          <div class="card-body">
+           <h5 class="card-title">1 Month</h5>
+          <p class="card-text">C${{this.cart.one}}/mo</p>
+          <br>
+          <br>     
+          <button class="priceButton" value={{this.id}}>Select this plan</button>
+          </div> 
+                    </div> 
+
+        <div class="col-lg card card-body-special priceHolder">
+          <div class="card-body">
+           <h5 class="card-title">12 Months</h5>
+          <p class="card-text">C${{this.cart.twelve}}/mo</p>
+          <p class="card-text" style="background-color: yellow;">Save 37%</p>
+          <p class="card-text" style="  text-decoration: line-through">${{this.cart.one}}</p>
+          <button class="priceButton" value={{this.id}}>Select this plan</button>
+          </div>
+        </div>
+        <div class="col-lg card card-body-special priceHolder">
+          <div class="card-body">
+           <h5 class="card-title">24 Months</h5>
+          <p class="card-text">C${{this.cart.twentyFour}}/mo</p>
+          <p class="card-text" style="background-color: yellow;">Save 40%</p>
+          <p class="card-text" style="  text-decoration: line-through">${{this.cart.one}}</p>
+          <button class="priceButton" value={{this.id}}>Select this plan</button>
+        </div>
+                  </div> 
+
+        <div class="col-lg card card-body-special priceHolder">
+          <div class="card-body">
+           <h5 class="card-title">36 Months</h5>
+          <p class="card-text">C${{this.cart.price}}/mo</p>
+          <p class="card-text" style="background-color: yellow;">Save 43%</p>
+          <p class="card-text" style="  text-decoration: line-through">${{this.cart.one}}</p>
+          <button class="priceButton" value={{{this.id}}}>Select this plan</button>
+        </div>
+                  </div> 
+
+        <div class="col-lg card card-body-special">
+          <div class="card-body">
+           <h5 class="card-title">Order Summary</h5>
+          <p class="card-text" id="summaryPlan"></p>
+          <p class="card-text" id="summaryPromo" ></p>
+          <p class="card-text" id="summaryTotal" ></p>
+          <div id="summaryButton"></div>
+        </div>
+      </div> 
+
+    </div>
+    {{/if}}
+    {{/if}}
+  <script src="./bootstrap-5.0.1-dist/js/bootstrap.bundle.js"></script>
+  <script type="text/javascript" src="/scripts.js"></script>
+  </body>
+</html>
