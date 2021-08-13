@@ -2,12 +2,12 @@
     <div class="indexCol"></div>
     <div class="columnMiddleIndex">
         <section>
-            <div class="category"><hr style="width=30%">Category<hr style="width=30%"></div>
-            {{#each renCat}}
+            <div class="category"><hr style="width=30%">Welcome to BY World<hr style="width=30%"></div>
+            {{!-- {{#each renCat}}
             <div class="row-1">
                 <div class="column-1">
                     <div class="card">
-                        <img src="/uploads/{{this.pic}}" alt="Category" style="width:105%" >
+                        <img src="public\img\byworld.jpg{{this.pic}}" alt="Category" style="width:105%" >
                         <div class="container">
                             <h4><b>{{this.title}}</b></h4>
                             <p>{{this.price}}</p>
@@ -15,7 +15,34 @@
                     </div>
                 </div>
             </div>
-            {{/each}}
+            {{/each}} --}}
+            <body>
+
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="byworld.jpg" style="width:800">
+  <img class="mySlides" src="byworld2.jpg" style="width:800">
+  <img class="mySlides" src="byworld3.jpg" style="width:800">
+  <img class="mySlides" src="byworld4.jpg" style="width:800">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
         </section>
 
         {{!-- Best Seller --}}
@@ -36,5 +63,6 @@
             <img src="sidebanner.png" alt="side-banner" width="200">
         </div>
     </div>
+    
 </div>
 

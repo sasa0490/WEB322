@@ -33,23 +33,26 @@
             {{#if (eq user.type 'user') }}
             <a class="navfont" href="/"><i class="fas fa-home"></i> Home</a></li>
             <a class="navfont" href="/products"><i class="fas fa-shopping-basket"></i> Products</a></li>
+            <a class="navfont" href="/plan"><i class="fas fa-book-open"></i> plan</a></li>
             <a class="navfont" href="/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a></li>
             <a class="navfont" href="/cart/{{_id}}"> <i class="fas fa-shopping-cart"></i> Cart</a></li>
-            <a class="navfont" href="/plan"><i class="fas fa-book-open"></i> plan</a></li>
+            
             {{!-- admin --}}
             {{else if (eq user.type 'admin')}}
             <a class="navfont" href="/"><i class="fas fa-home"></i> Home</a></li>
             <a class="navfont" href="/products"><i class="fas fa-shopping-basket"></i> Products</a></li>
+            <a class="navfont" href="/plan"><i class="fas fa-book-open"></i> plan</a></li>
             <a class="navfont" href="/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a></li>
             <a class="navfont" href="/admin"> <i class="fas fa-user-shield"></i> Administrator</a></li>
-            <a class="navfont" href="/plan"><i class="fas fa-book-open"></i> plan</a></li>
+            
             {{else}}
             {{!-- non-register user --}}
             <a class="navfont" href="/"><i class="fas fa-home"></i> Home</a></li>
             <a class="navfont" href="/products"><i class="fas fa-shopping-basket"></i> Products</a></\li>
+            <a class="navfont" href="/plan"><i class="fas fa-book-open"></i> plan</a></li>
             <a class="navfont" href="/customer-registration"><i class="fas fa-registered"></i> Customer Registration</a>
             <a class="navfont" href="/login"> <i class="fas fa-sign-in-alt"></i> Login</a></li>
-            <a class="navfont" href="/plan"><i class="fas fa-book-open"></i> plan</a></li>
+            
             {{/if}}
         </nav>
     </div>
