@@ -2,12 +2,12 @@
   "name": "a1",
   "version": "1.0.0",
   "description": "web322 assignment 1",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx nodemon server.js"
   },
-  "author": "omar",
+  "author": "Byung Yeol Hyang",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
