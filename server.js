@@ -1,52 +1,85 @@
-/* 
-  WEB322 Assignment 2
-  Name: Omar Khan
-  Student Number: 132197203
-  Email: okhan27@myseneca.ca
-  Section NCC
-  Date: 29/06/2021
-  All the work in the project is my own except for stock photos, icons, and bootstrap files included
-  Live demo: https://web322-a2-omar-khan.herokuapp.com/
-  github repo: https://github.com/lowsound42/web322a2
-  */
-
-const express = require('express');
+const express = require("express"); //this imports the express package that was installed within your application
 const app = express();
-const port = process.env.PORT || 8080;
-const bodyParser = require('body-parser');
-const exphbs = require('express-handlebars');
-app.engine('.hbs', exphbs({ extname: '.hbs', defaultLayout: 'main' }));
-app.set('view engine', '.hbs');
-require('dotenv').config();
-const db = process.env.mongoCreds;
+const exphbs = require("express-handlebars");
+const bodyParser = require("body-parser")
+const mongoose = require('mongoose');
+const session = require('express-session');
+const fileUpload = require('express-fileupload');
+require('dotenv').config({path:"./config/keys.env"});
 
-var mongoose = require('mongoose');
-mongoose.set('useFindAndModify', false);
+const Handlebars = require('handlebars');
+const H = require('just-handlebars-helpers');
+H.registerHelpers(Handlebars);
 
-var Schema = mongoose.Schema;
-app.use(express.static('static'));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+//load the environment variable file 
+require('dotenv').config({path:"./config/keys.env"});
 
-let apiRoutes = require('./routes/routes');
+//handlebars middleware (this tells Express to set handlebars as the template engine )
+app.engine("handlebars", exphbs());
+app.set("view engine", "handlebars");
+
+app.use(express.static("public"));
+app.use(express.static("public/img"));
+
+//makse express to make form data avaiable via req.body in ever
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// load controllers
+const generalConstroller = require("./controllers/general");
+const customerConstroller = require("./controllers/customer-manage");
+const productConstroller = require("./controllers/product");
+const planconstroller = require("./controllers/plan")
+
+// this is to allow specific forms and/or links that were submitteed /pressed to send PUT and DELETE request resepectivly 
+app.use((req,res,next)=>{
+    if(req.query.method == "PUT")
+    {
+        req.method = "PUT";
+    }
+    else if(req.query.method == "DELETE")
+    {
+        req.method = "DELETE";
+    }
+    next();
+});
+
+app.use(fileUpload());
+
+app.use(session({secret: `${process.env.SESSION_SECRET}`, 
+                resave: false,
+                saveUninitialized: true}));
+
+//custom middleware functions
+app.use((req,res,next)=>{   
+
+    //res.locals.user is a global handlebars variable. This means that ever single handlebars file can access 
+    //that user variable
+    res.locals.user = req.session.user;
+    next();
+    //this allow to use using {{user.firstName}}
+});
+
+
+
+//map each controller to the app object
+app.use("/",generalConstroller);
+
+app.use("/",productConstroller);
+
+app.use("/",customerConstroller);
+
+app.use("/", planconstroller);
+
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+    console.log(`Web Server Started`);
+});
 
 mongoose
-    .connect(db, {
+    .connect(process.env.MONGODB_DB_CONNECTION_STRING, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true
     })
     .then(() => console.log('MongoDB Connected...'))
     .catch((err) => console.log(err));
-
-app.use('/', apiRoutes);
-
-app.use((req, res, next) => {
-    res.render('404', {
-        layout: false
-    });
-});
-
-app.listen(port, () => {
-    console.log('Server is live at port:', port);
-});

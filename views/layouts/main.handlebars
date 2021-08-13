@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Pacifico|Shadows+Into+Light&display=swap"rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <title>{{title}}</title>    
+</head>
+
+<body>
+
+    <header class="frontdoor">
+        <h1>
+            <a class="Logo" href="/">
+                <hr width="60%">
+                <i class="fas fa-car -2x"></i> BY Benz Car <i class="fas fa-car -2x"></i>
+                <hr width="60%">
+            </a>
+        </h1>
+    </header>
+    <div class="head"></div>
+
+    <div class="topnav">
+        <nav>
+            {{!-- customer --}}
+            {{#if (eq user.type 'user') }}
+            <a class="navfont" href="/"><i class="fas fa-home"></i> Home</a></li>
+            <a class="navfont" href="/products"><i class="fas fa-shopping-basket"></i> Products</a></li>
+            <a class="navfont" href="/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            <a class="navfont" href="/cart/{{_id}}"> <i class="fas fa-shopping-cart"></i> Cart</a></li>
+            <a class="navfont" href="/plan"><i class="fas fa-book-open"></i> plan</a></li>
+            {{!-- admin --}}
+            {{else if (eq user.type 'admin')}}
+            <a class="navfont" href="/"><i class="fas fa-home"></i> Home</a></li>
+            <a class="navfont" href="/products"><i class="fas fa-shopping-basket"></i> Products</a></li>
+            <a class="navfont" href="/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            <a class="navfont" href="/admin"> <i class="fas fa-user-shield"></i> Administrator</a></li>
+            <a class="navfont" href="/plan"><i class="fas fa-book-open"></i> plan</a></li>
+            {{else}}
+            {{!-- non-register user --}}
+            <a class="navfont" href="/"><i class="fas fa-home"></i> Home</a></li>
+            <a class="navfont" href="/products"><i class="fas fa-shopping-basket"></i> Products</a></\li>
+            <a class="navfont" href="/customer-registration"><i class="fas fa-registered"></i> Customer Registration</a>
+            <a class="navfont" href="/login"> <i class="fas fa-sign-in-alt"></i> Login</a></li>
+            <a class="navfont" href="/plan"><i class="fas fa-book-open"></i> plan</a></li>
+            {{/if}}
+        </nav>
+    </div>
+
+    <div class="row">
+        {{{body}}}
+    </div>
+    <footer>
+        <div style="display: inline-block; text-align: center;">
+            <ul class="nav">
+
+                <li class="nav-item"><a class="nav-link" href="tel:1-519-781-9106"><i class="fa fa-phone"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="mailto:bhyang1@mysenenca.ca"><i
+                            class="fa fa-envelope-o"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/byung-yeol-hyang-b03532193/"
+                        target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/sasa0490" target="_blank"><i
+                            class="fab fa-github"></i></a></li>
+            </ul>
+        </div>
+
+    </footer>
+    <script src="https://kit.fontawesome.com/c92f2e0cce.js" crossorigin="anonymous"></script>
+    
+</body>
+
+</html>

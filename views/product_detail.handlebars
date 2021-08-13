@@ -1,0 +1,83 @@
+<div class="vertical-menu column side products">
+
+         <a class="font" href="/suv"><i class="fas fa-bullseye"></i> SUV</a>
+        <a class="font" href="/sedans"><i class="fas fa-bullseye"></i> Sedans</a>
+        <a class="font" href="/coupes"><i class="fas fa-bullseye"></i> Coupes</a>
+        <a class="font" href="/cabriolets"><i class="fas fa-bullseye"></i> Cabriolets</a>
+    </div>
+
+<form action="/cart" method="POST" enctype="multipart/form-data">
+
+   
+    <div class="product_container">
+        <div class="col_product_left"></div>
+        <div class="card1">
+            <div class="container-fliud">
+                <div class="wrapper row">
+                    <div class="image_box">
+
+                        <div class="image_render">
+                            <div class="tab-pane active" id="pic-1"><img src="/uploads/{{productPic}}"></div>
+                        </div>
+
+                    </div>
+                    <div class="details col-md-6">
+                        <h3 class="product-title">{{pname}}</h3>
+                        <div class="des" >{{pdet}}</div>
+                        <div class="rating">
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span class="review-no">20 reviews</span>
+                        </div>
+
+                        <div class="col-50">
+                            <label for="pquan"><i class="fas fa-balance-scale-right"></i><b>&nbsp quantity</b></label>
+                            <select name="pquan" class="best_design" style="width: 185px; height: 42px">
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+
+                            <p class="product-description">{{pdes}}</p>
+                            <h4 class="price">current price: <span>${{pprice}}</span></h4>
+                            <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
+                                    votes)</strong>
+                            </p>
+
+
+                            <div class="action">
+                                {{#if (eq user.type 'user') }}
+                                <button type="submit" class="add-to-cart btn btn-default">add to cart</button>
+                                {{/if}}
+                                <button class="like btn btn-default" type="button"><span
+                                        class="fa fa-heart"></span></button>
+
+                                <input type="text" id="pname" name="pname" placeholder="Product Name" value="{{this.pname}}" style="display: none;">
+
+                                <input type="text" id="pprice" name="pprice" placeholder="price" value="{{this.pprice}}" style="display: none;">
+
+                                <input type="text" name="productPic" id="productPic" value = "{{this.productPic}}" style="display: none;">
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col_product_right"></div>
+        </div>
+</form>

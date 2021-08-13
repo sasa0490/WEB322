@@ -1,0 +1,66 @@
+
+<div class="flexbox" style="display:flex;">
+    <div class="colside"></div>
+    <div>
+        <form method="POST" action="/login" >
+            <div class="image">
+                <img src="hero.png" alt="logo" width="500">
+            </div>
+
+            <div class="enterBox">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter email" name="email" value="{{l_email}}" >
+                {{#each errorE}}
+                <div class="valid"><i class="fas fa-exclamation" style="font-size:10px; color:red;"></i>
+                &nbsp
+                {{this}}
+                </div>
+                {{/each}}
+
+                {{#each isMatch_email}}
+                <div class="valid"><i class="fas fa-exclamation" style="font-size:10px; color:red;"></i>
+                &nbsp
+                {{this}}
+                </div>
+                {{/each}}
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw">
+                {{#each errorPassword}}
+                <div class="valid"><i class="fas fa-exclamation" style="font-size:10px; color:red;"></i>
+                &nbsp
+                {{this}}
+                </div>
+                {{/each}}
+                
+                {{#each isMatch_psw}}
+                <div class="valid"><i class="fas fa-exclamation" style="font-size:10px; color:red;"></i>
+                &nbsp
+                {{this}}
+                </div>
+                {{/each}}
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container signin">
+                <hr>
+                <p><b>New to BY Benz CAR? </b></p>
+                <hr>
+            </div>
+        </form>
+
+        <div class="disgoToRegi">
+            <form class="goToRegi" action="/customer-registration">
+                <button>Register</button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="colside"></div>
+</div>
+

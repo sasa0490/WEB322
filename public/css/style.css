@@ -1,0 +1,852 @@
+* {
+  box-sizing: border-box;
+  
+}
+
+.headerOnTop {
+  position: absolute;
+  color: rgb(151, 19, 19);
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+
+/* header */
+.head {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  margin: 0;
+  height: 800px;
+  opacity: 0.7;
+  background-image: url(../img/benz-background.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.Logo{
+  font-weight: 900;
+  text-decoration: none;
+  font-size:7rem;
+  color: black;
+}
+
+.frontdoor{
+  position: absolute;
+  margin-top: 17rem;
+  margin-left: 28rem;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.column.side {
+  width: 40%
+}
+
+.columnMiddleIndex {
+  width: 90%;
+  text-align: center;
+}
+.columnBest{
+  margin-top: 400px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+/*      Index    */
+.navfont{
+  font-family: 'Acme', sans-serif;
+}
+
+.column-1 {
+float: left;
+width: 25%;
+padding: 10px;
+}
+.row-1{
+margin: 10px;
+}
+
+.indexCol{
+width:20%;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.card {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+padding: 16px;
+text-align: center;
+background-color: #f1f1f1;
+position: static;
+}
+
+/*FOOTER*/
+ul {
+list-style-type: none;
+column-count: 5;
+}
+
+/* category  */
+.category{
+
+font-size: 2rem;
+text-align: center;
+font-family: 'Sriracha', cursive;
+}
+
+
+/* Best items */
+.bestitem{
+font-size: 2rem;
+text-align: center;
+font-family: 'Sriracha', cursive;
+}
+
+div.scrollmenu {
+background-color: rgb(107, 99, 99);
+overflow: auto;
+white-space: nowrap;
+
+}
+
+div.scrollmenu ::-webkit-scrollbar-thumb {
+display: inline-block;
+color: rgb(163, 50, 50);
+text-align: center;
+padding: 20px;
+text-decoration: none;
+}
+
+div.scrollmenu src:hover {
+background-color: #777;
+}
+
+div.p{
+padding-top: 10rem ;
+text-align: center;
+}
+
+
+::-webkit-scrollbar {
+width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: black; 
+border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: grey; 
+}
+
+/* Products  */
+
+.vertical-menu {
+background-color: #333;
+width: 40%;
+height: 100%
+}
+
+.vertical-menu a {
+background-color: #333;
+color: white;
+display: block;
+padding: 10px;
+text-decoration: none;
+}
+
+.vertical-menu a:hover {
+background-color: #ccc;
+
+}
+
+.vertical-menu a.active {
+background-color: #4CAF50;
+color: white;
+
+}
+
+.column.side.products{
+width:15%;
+
+}
+
+.column.middle.products{
+width:80%;
+}
+
+.font{
+font-family: 'Sriracha', cursive;
+}
+
+/* Register */
+
+h{
+font-size: 40px;
+}
+
+.cust-box{
+padding: 16px;
+}
+
+.columnRegister{
+  width: 50%;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+background-color: #ddd;
+outline: none;
+}
+
+hr {
+border: 1px solid black;
+margin-bottom: 25px;
+}
+
+.registerbtn {
+background-color: black;
+color: white;
+padding: 16px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+opacity: 0.9;
+}
+
+.registerbtn:hover {
+opacity: 1;
+}
+
+a {
+/* color: dodgerblue; */
+}
+
+.signin {
+background-color: #f1f1f1;
+text-align: center;
+width: 100%;
+}
+
+.colside{
+width: 60%;
+}
+
+/* login */
+
+.image{
+text-align: center;
+}
+
+.pwInform{
+font-size: 5px;
+margin-bottom: 2px;
+}
+
+form {
+border: 3px solid #f1f1f1;
+}
+
+input[type=text],
+input[type=password] {
+width: 90%;
+padding: 12px 20px;
+margin: 8px 8px;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+}
+
+button {
+background-color: black;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+}
+
+.disgoToRegi {
+
+background-color: white;
+}
+
+.goToRegi {
+background-color: black;
+color: white;
+padding: 2px 2px 2px 2px;
+margin: white;
+border: none;
+cursor: pointer;
+width: 100%;
+}
+
+button:hover {
+opacity: 0.8;
+}
+
+.enterBox {
+padding: 16px;
+}
+/* validation font control */
+.valid{
+  font-size: 10px;
+  font-weight: bolder;
+  margin-left: 10px;
+
+}
+
+
+/* Welcome */
+.welcomebox{
+  display: flex;
+
+  
+}
+.columnWel{
+  
+  height: 800px;
+  width: 90%;
+  margin-top: 100px;
+  flex-direction: column;
+  
+}
+
+.colsideWel{
+  width: 20%;
+  flex-direction: column;
+}
+
+.welcome{
+  font-size: 72px;
+  font-family: 'Indie Flower';
+  background: -webkit-linear-gradient(rgb(0, 0, 0), rgb(246, 239, 239));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+.welcome-1{
+  font-family: 'Indie Flower';
+  text-align: center;
+  margin-right: 50px;
+}
+.welcome-2{
+  font-family: 'Indie Flower';
+  text-align: center;
+  margin-left: 50px;
+}
+.welcome-3{
+  font-family: 'Indie Flower';
+  text-align: center;
+  margin-left: 120px;
+}
+.welcome-4{
+  font-family: 'Indie Flower';
+  text-align: center;
+}
+
+.strong1{
+  font-size: 50px !important;
+  font-family: 'Pacifico';
+}
+.strong2{
+  font-size: 50px !important;
+  font-family: 'Shadows Into Light';
+}
+.strong3{
+  font-size: 60px !important;
+  font-family: 'Caveat';
+}
+
+.goToShop {
+
+  background-color: white;
+  
+  }
+  
+  .goBtn {
+  background-color: black;
+  color: white;
+  padding: 2px 2px 2px 2px;
+  margin: white;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  margin-top: 100px;
+  margin-left: 350px;
+  }
+
+/* Add form */
+
+
+.row1234 {
+  display: flexbox; 
+  display: flex;
+  flex-wrap: wrap; 
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container1234 {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  width: 600px;
+}
+
+input[type=text] {
+  width: 90%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+a {
+  /* color: #2196F3;  */
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+.cate_design{
+  margin-left: 10px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+h3{
+  font-size: 50px;
+  text-align: center;
+}
+
+.best_design{
+  margin-left: 10px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-top: 7px;
+
+}
+
+.col-51 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+/* forbidden page */
+.cage {
+	position: absolute;
+	width: 100%;
+
+	bottom: 0;
+	top: 0;
+  background: repeating-linear-gradient(90deg, transparent, transparent 	80px, #6f7376 80px, #181617 100px);
+	z-index: 2;
+	animation: close 3s linear;
+}
+.seperate { 
+	  position: fixed;
+    z-index: 1;
+    font-size: 23em;
+    color:  #000;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+		z-index: 1;
+		background-color: #E4E4E1;
+ background-image: radial-gradient(at top center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.03) 100%), linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(143,152,157,0.60) 100%);
+ 	background-blend-mode: normal, multiply;
+}
+.really {
+	position: relative;
+}
+.really:after {
+    content: '403';
+    position: absolute;
+    top: 0;
+    bottom: -96px;
+    left: 40px;
+    transform: scaleY(0.6) rotateX(-75deg) skewX(-10deg);
+    transform-origin: 50% 100%;
+    opacity: .2;
+    line-height: 1;
+}
+@keyframes close {
+    0% { left: -75%;}
+    100%{ left: 0%}
+}
+
+.home_button {
+  background-color: #000;
+  border: none;
+  color: white;
+  padding: 20px 34px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  margin-left: 850px;
+}
+
+/* product */
+.product_container{
+  display: flex;
+ 
+  border-left: 200px;
+}
+
+.col_product_left{
+ 
+  width: 30%;
+}
+
+.col_product_right{
+ 
+  width: 60%;
+}
+
+.card1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card1 {
+  width: 2000px;
+  margin-left: 100px;
+  margin-right: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  }
+
+  /* Cart */
+  .parents{
+    display: flex;
+    margin-left: 500px;
+    
+  }
+
+  .img-child1{
+    flex-direction: column;
+    width: 800px;
+  }
+
+  .img-child2{
+    flex-direction: row;
+    
+  }
+
+  .child2{
+    margin-left: 50px;
+    flex-direction: column;
+    width: 500px;
+    height: 500px !important;
+    font-family: 'Sriracha', cursive;
+  }
+
+  .product-box{
+    display: flex;
+    width: 500px;
+    height: 250px;
+    font-family: 'Sriracha', cursive;
+  }
+
+  .img-box{
+    font-family: 'Sriracha', cursive;
+    width: 60%;
+    margin-top: 20px;
+  }
+  .des-box{
+    flex-direction: column;
+    font-family: 'Sriracha', cursive;
+    width: 400px;
+  }
+
+  .price-tag{
+    color: red;
+  }
+
+  .stock{
+    color: green;
+  }
+
+  .total{
+    color: red;
+    font-family: 'Sriracha', cursive;
+  }
+
+  a.cart_button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button ;
+
+    text-decoration: none;
+    color: black;
+}
+
+
+.cart_button {
+  display: block;
+  width: 300px;
+  height: 50px;
+  background: black;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white !important;
+  font-weight: bold;
+  
+}
+
+.href_buttom{
+  width: 120px;
+  height: 30px;
+}
+
+.href_buttom_detail_box{
+  margin-left: 100px;
+  display: block;
+  width: 100px;
+  height: 50px;
+  background: black;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white !important;
+  font-weight: bold;
+}
+
+.href_button_detail{
+  width: 120px;
+  height: 30px;
+  text-decoration: none;
+  color: white !important;
+  font-family: 'Sriracha', cursive ;
+  font-size: 20px;
+}
+
+.href_buttom_dash_box-1{
+  flex-direction: column;
+
+  display: block;
+  width: 100px;
+  height: 50px;
+  background: black;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white !important;
+  font-weight: bold;
+}
+
+.href_buttom_dash_box-2{
+  flex-direction: column;
+  margin-left: 10px;
+  display: block;
+  width: 100px;
+  height: 50px;
+  background: black;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white !important;
+  font-weight: bold;
+}
+
+.href_button_dash_edit{
+  flex-direction: column;
+  width: 200px;
+  height: 30px;
+  text-decoration: none;
+  color: white !important;
+  font-family: 'Sriracha', cursive ;
+  font-size: 20px;
+}
+
+.href_button_dash_del{
+  flex-direction: column;
+  width: 120px;
+  height: 30px;
+  text-decoration: none;
+  color: white !important;
+  font-family: 'Sriracha', cursive ;
+  font-size: 20px;
+ 
+}
+
+
+.flex_box{
+  margin-left: 40px;
+  display:flex;
+}
+
+.product-search-box{
+  display:flex;
+  width: 100%
+}
+
+
+.column-middle-products{
+
+  width: 100%;
+}
+
+.colside-products-left{
+  display: flex;
+  width: 10% ;
+}
+
+.colside-products-right{
+  display: flex;
+  width: 10%;
+}
+
+.drop-search{
+  display:flex;
+}
+
+.drop-search-1{
+  width: 35%
+}
+
+.search_machine{
+  text-align: center;
+  font-size: 25px;
+}
+
+#timedate {
+  font: small-caps lighter 43px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  text-align:left;
+  width: 50%;
+  margin: 40px auto;
+  color:#fff;
+  border-left: 3px solid #ed1f24;
+  padding: 20px;
+}
+.clock_box{
+background-color:#b8b1b1;
+}
+
+

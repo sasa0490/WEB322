@@ -1,0 +1,31 @@
+
+   <div class="vertical-menu column side products">
+
+         <a class="font" href="/suv"><i class="fas fa-bullseye"></i> SUV</a>
+        <a class="font" href="/sedans"><i class="fas fa-bullseye"></i> Sedans</a>
+        <a class="font" href="/coupes"><i class="fas fa-bullseye"></i> Coupes</a>
+        <a class="font" href="/cabriolets"><i class="fas fa-bullseye"></i> Cabriolets</a>
+    </div>
+
+<div class="column middle products">
+<section >
+    {{#each wrist}}
+        <div class="row-1">
+            <div class="column-1">
+                <div class="card {{this.class}}">
+                    <img src="/uploads/{{this.pic}}" alt="Best_Sellar" style="width:80%">
+                    <div class="container">
+                        <h4><b>{{this.pname}}</b></h4>
+                        <p><b><span>CDN$&nbsp</span>{{this.pprice}}</b></p>
+
+                        <div class="href_buttom_detail_box">
+                            <a href= "/product_detail/{{this.id}}" class="href_button_detail">detail</a>
+                            </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</section>
+</div>

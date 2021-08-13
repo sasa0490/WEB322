@@ -1,0 +1,27 @@
+    <div class="colside-products-left"></div>
+    <div class="column-middle-products">
+        <section>
+
+            {{#each data}}
+            <div class="row-1">
+                <div class="column-1">
+                    <div class="card">
+                        <img src="/uploads/{{this.pic}}" alt="Best_Sellar" style="width:80%">
+                        <div class="container">
+                            <h4><b>{{this.pname}}</b></h4>
+                            <p><span>CDN$&nbsp</span>{{this.pprice}}</p>
+
+                            <div class="href_buttom_detail_box">
+                                <a href="/plan_detail/{{this.id}}" class="href_button_detail">detail</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </section>
+    </div>
+
+<div class="colside-products-right"></div>
+</div>

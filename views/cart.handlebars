@@ -1,0 +1,56 @@
+<hr style="width=100px">
+<div class="parents">
+    <div class="img-child1">
+        <div class="img-child2">
+            {{#each data}}
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="/uploads/{{productPic}}" alt="Best_Sellar" style="width:300px; height:160px ">
+                </div>
+
+                <div class="des-box">
+                    <h4><b>{{this.pname}}</b></h4>
+                    <p><span class="price-tag">CDN$&nbsp</span> {{this.pprice}}</p>
+                    <p class="stock">In Stock</p>
+                    <p>Quantity: {{this.pquan}}</p>
+                </div>
+
+            </div>
+            <hr style="width=30%">
+            {{else}}
+           
+                <img src="/img/empty-cart.png" alt="Best_Sellar" style="width:100%; height:width:100% ">
+               
+            {{/each}}
+        </div>
+    </div>
+    {{#if ( neq totalPrice 0)}}
+    <div class="child2">
+        <hr style="width=30%">
+        {{#if ( neq totalPrice 0)}}
+        <hr style="width=30%">
+        <div>
+            <p><span class="price-tag">CDN$&nbsp</span> {{totalPrice}}</p>
+        </div>
+        {{/if}}
+        {{#if ( neq totalQuan 0)}}
+        <div>
+            <p>Items:({{totalQuan}}) <span class="price-tag">CDN$&nbsp</span>{{totalPrice}}</p>
+        </div>
+        <br>
+        <br>
+       
+        <hr style="width=30%">
+        <p class="total"><b>Order Total: CDN$&nbsp {{totalPrice}} </b></p>
+        <hr style="width=30%">
+        {{/if}}
+        {{/if}}
+        {{#if data}}
+        <div class="href_buttom">
+        <a href="/cart/?method=DELETE" class="cart_button" type="submit">Place Your Order</a>
+        </div>
+        {{/if}}
+
+    </div>
+
+</div>

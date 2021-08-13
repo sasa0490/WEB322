@@ -1,0 +1,52 @@
+<div class="flexbox" style="display:flex;">
+  <div class="colside"></div>
+  <div class="row1234">
+    <div class="col-75">
+      <div class="container1234">
+        <form action="/planadd" method="POST" enctype="multipart/form-data">
+          <h3>Plan Addition</h3>
+          <div class="row1234">
+            <div class="col-50">
+
+              <label for="pname"><i class="fab fa-product-hunt"></i><b>Plan Name</b> </label>
+              <input type="text" id="pname" name="pname" placeholder="Plan Name">
+
+              <label for="pprice"><i class="fas fa-dollar-sign"></i> <b>Plan Price</b></label>
+              <input type="text" id="pprice" name="pprice" placeholder="price">
+              <div class="row1234">
+                <div class="col-50">
+                  <label for="pquan"><i class="fas fa-balance-scale-right"></i><b>&nbsp Plan Year</b></label>
+                  <select name="pquan" class="best_design" style="width: 185px; height: 42px">
+                    <option value="">Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+ 
+              </div>
+              <label for="plan_det"><i class="fa fa-address-card-o"></i><b>&nbsp Plan Detail</b> </label>
+              <textarea type="text" id="plan_det" name="plan_det" style = "margin-left: 10px;width: 450px; height: 150px;"></textarea>
+
+              <label><i class="fas fa-camera-retro"></i> &nbsp <b>File Upload</b></label>
+              <input type="file" name="productPic" id="productPic" accept="image/*"> <br><br>
+            </div>
+
+
+          </div>
+          <input type="submit" value="Finsih Addition" class="btn">
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="colside"></div>
+</div>

@@ -1,0 +1,92 @@
+
+<div class="flexbox" style="display:flex;">
+    <div class="colside"></div>
+
+    <div class="columnRegister">
+        <form name="register" method="POST" action="/customer-registration">
+            <div class="cust-box">
+                <h style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Create Account</h>
+                <hr>
+                {{!-- Name --}}
+                <label for="fullName"><b>Name</b></label>
+                <input type="text" placeholder="Enter Name" id="fullName" name="fullName" value="{{r_name}}"> <br>
+
+                {{#each errorName}}
+                <div class="valid"><i class="fas fa-exclamation" style="font-size:10px; color:red;"></i>
+                &nbsp
+                {{this}}
+                </div>
+                {{/each}}
+                
+                {{!-- Email --}}
+                <label for="email"> <b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" value="{{r_email}}">
+
+                {{#each errorEmail}}
+                <div class="valid"><i class="fas fa-exclamation" style="font-size:10px; color:red;"></i>
+                &nbsp
+                {{this}}
+                </div>
+                {{/each}}
+
+                {{#each errorduplicate}}
+                <div class="valid"><i class="fas fa-exclamation" style="font-size:10px; color:red;"></i>
+                &nbsp
+                {{this}}
+                </div>
+                {{/each}}
+
+                {{!-- Password --}}
+                <label for="psw"> <b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw">
+
+                {{#each errorPws}}
+                <div class="valid"><i class="fas fa-exclamation" style="font-size:10px; color:red;"></i>
+                &nbsp
+                {{this}}
+                </div>
+                {{/each}}
+
+                
+                {{#each errorVal}}
+                <div class="valid"><i class="fas fa-exclamation" style="font-size:10px; color:red;"></i>
+                &nbsp
+                {{this}}
+                </div>
+                {{/each}}
+                
+                {{!-- Password Again --}}
+                <label for="pswrepeat"> <b>Password again</b></label>
+                <input type="password" placeholder="Repeat Password" name="pswrepeat">
+                
+                {{#each errormatch}}
+                <div class="valid"><i class="fas fa-exclamation" style="font-size:10px; color:red;"></i>
+                &nbsp
+                {{this}}
+                </div>
+                {{/each}}
+
+                {{#each errorRe}}
+                <div class="valid"><i class="fas fa-exclamation" style="font-size:10px; color:red;"></i>
+                &nbsp
+                {{this}}
+                </div>
+                {{/each}}
+                
+
+                <hr>
+                <p style="text-align: center; font-size:15px;">By creating an account you agree to our <a
+                        href="https://policies.google.com/">Terms & Privacy</a>.</p>
+
+                <button type="submit" class="registerbtn" >Register</button>
+            </div>
+
+            <div class="container signin">
+                <p>Already have an account? <a style="dodgerblue" href="/login">Sign in</a>.</p>
+            </div>
+        </form>
+    </div>
+
+    <div class="colside"></div>
+</div>
+

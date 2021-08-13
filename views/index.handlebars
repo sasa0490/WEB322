@@ -1,0 +1,40 @@
+<div class="box" style="display:flex">
+    <div class="indexCol"></div>
+    <div class="columnMiddleIndex">
+        <section>
+            <div class="category"><hr style="width=30%">Category<hr style="width=30%"></div>
+            {{#each renCat}}
+            <div class="row-1">
+                <div class="column-1">
+                    <div class="card">
+                        <img src="/uploads/{{this.pic}}" alt="Category" style="width:105%" >
+                        <div class="container">
+                            <h4><b>{{this.title}}</b></h4>
+                            <p>{{this.price}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </section>
+
+        {{!-- Best Seller --}}
+        <div class="columnBest">
+            <div class="bestitem"><hr> Best Item <hr></div>
+            <section>
+                <div class="scrollmenu">
+                    {{#each renBest}}
+                    <img class="{{this.onlyBestAllowed}}" src="/uploads/{{this.pic}}" alt="Best_Sellar" style="width:20%; height: 50%">
+                    {{/each}}
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="indexCol">
+        <div class="side bannder" style="margin-top: 100px;">
+            <img src="sidebanner.png" alt="side-banner" width="200">
+        </div>
+    </div>
+</div>
+
