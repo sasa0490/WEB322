@@ -23,8 +23,7 @@
     "handlebars": "^4.7.7",
     "install": "^0.13.0",
     "just-handlebars-helpers": "^1.0.18",
-    "mongoose": "^5.13.6",
-    "multer": "^1.4.3"
+    "mongoose": "^5.13.6"
   },
   "devDependencies": {
     "livereload": "^0.9.3",
